@@ -1,5 +1,5 @@
 {
-  "name": "shout",
+  "name": "istanbul-coverage-shout",
   "version": "0.0.1",
   "description": "Sends coverage report on Slack webhook",
   "main": "./bin/shout.js",
@@ -13,6 +13,10 @@
     "shout": "./bin/shout.js"
   },
   "author": "Krzysztof Pająk <kpajak@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/exogenesick/istanbul-coverage-shout.git"
+  },
   "license": "ISC",
   "dependencies": {
     "app-root-path": "^1.2.1",
