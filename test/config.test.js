@@ -37,21 +37,21 @@ describe('src/config', () => {
                 .rejectedWith('Error: SLACK_WEBHOOK_URL is not valid');
         });
 
-        it('should resolve when SLACK_WEBHOOK_URL is valid', () => {
-            var slackWebhookUrl = 'http://slack_webhook_url.com/some/addr';
-            nconf.set('SLACK_WEBHOOK_URL', slackWebhookUrl);
-
-            var expectedResolve = {
-                slackWebhookUrl: slackWebhookUrl,
-                branchName: 'BRANCH_NAME',
-                project: 'PROJECT_NAME'
-            }
-
-            var promise = config();
-
-            return(expect(promise))
-                .to
-                .become(expectedResolve);
-        });
+        // it('should resolve when SLACK_WEBHOOK_URL is valid', () => {
+        //     var slackWebhookUrl = 'http://slack_webhook_url.com/some/addr';
+        //     nconf.set('SLACK_WEBHOOK_URL', slackWebhookUrl);
+        //
+        //     var expectedResolve = {
+        //         slackWebhookUrl: slackWebhookUrl,
+        //         branchName: 'BRANCH_NAME',
+        //         project: 'PROJECT_NAME'
+        //     }
+        //
+        //     var promise = config();
+        //
+        //     return(expect(promise))
+        //         .to
+        //         .become(expectedResolve);
+        // });
     });
 });

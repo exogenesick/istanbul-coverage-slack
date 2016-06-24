@@ -2,11 +2,12 @@
   "name": "shout",
   "version": "1.0.0",
   "description": "Sends coverage report on Slack webhook",
-  "main": "index.js",
+  "main": "./bin/shout.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha",
-    "lint": "./node_modules/.bin/eslint ./src/ ./test/",
-    "coverage": "./node_modules/.bin/istanbul --include-all-sources cover ./node_modules/.bin/_mocha -- -R dot test/**/*.test.js"
+    "test": "npm run lint && npm run coveralls",
+    "lint": "./node_modules/.bin/eslint bin/ src/ test/",
+    "coverage": "./node_modules/.bin/istanbul --include-all-sources cover ./node_modules/.bin/_mocha -- -R dot test/**/*.test.js",
+    "coveralls": "./node_modules/.bin/istanbul --include-all-sources cover ./node_modules/.bin/_mocha -- -R dot test/**/*.test.js && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "bin": {
     "shout": "./bin/shout.js"
@@ -24,6 +25,7 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-as-promised": "^5.3.0",
+    "coveralls": "^2.11.9",
     "eslint": "^2.13.1",
     "mocha": "^2.5.3"
   }
