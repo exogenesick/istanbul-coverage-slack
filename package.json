@@ -1,0 +1,30 @@
+{
+  "name": "shout",
+  "version": "1.0.0",
+  "description": "Sends coverage report on Slack webhook",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha",
+    "lint": "./node_modules/.bin/eslint ./src/ ./test/",
+    "coverage": "./node_modules/.bin/istanbul --include-all-sources cover ./node_modules/.bin/_mocha -- -R dot test/**/*.test.js"
+  },
+  "bin": {
+    "shout": "./bin/shout.js"
+  },
+  "author": "Krzysztof Pająk <kpajak@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "app-root-path": "^1.2.1",
+    "is-url": "^1.2.1",
+    "istanbul": "0.4.4",
+    "nconf": "^0.8.4",
+    "q": "^1.4.1",
+    "slack-node": "^0.2.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^5.3.0",
+    "eslint": "^2.13.1",
+    "mocha": "^2.5.3"
+  }
+}

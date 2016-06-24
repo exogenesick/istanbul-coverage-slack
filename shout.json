@@ -1,0 +1,18 @@
+{
+    "username": "Chuck Norris",
+    "icon": "https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2016-06-16/51472942259_48.png",
+    "coverageTresholds": {
+        "100": {
+            "text": "/giphy excellent",
+            "color": "good"
+        },
+        "80": {
+            "text": "/giphy not enough",
+            "color": "warning"
+        },
+        "50": {
+            "text": "/giphy it sucks",
+            "color": "danger"
+        }
+    }
+}
