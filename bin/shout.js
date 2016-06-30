@@ -1,19 +1,15 @@
 #!/usr/bin/env node
 
-var nconf = require('nconf');
-var config = require('../src/config');
-var report = require('../src/report');
+const nconf = require('nconf');
+const config = require('../src/config');
+const report = require('../src/report');
 
+nconf.use('memory');
 nconf
     .argv()
     .env();
 
 config()
-    .then(report.bind(null))
-    .then(() => {
-        console.log('ok');
-    })
-    .catch((err) => {
-        console.error(err);
-        process.exit(1);
-    });
+    .then(report)
+    .then(console.log)
+    .catch(console.error);

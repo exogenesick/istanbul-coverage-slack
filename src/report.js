@@ -1,7 +1,8 @@
 var istanbul = require('istanbul');
 var fs = require('fs');
 
-function getCoverageReport(files) {
+module.exports = function(files) {
+    console.log(files);
     files = files || [];
 
     var collector = new istanbul.Collector();
@@ -19,5 +20,3 @@ function getCoverageReport(files) {
         console.log(reporter);
     });
 }
-
-module.exports = getCoverageReport;
