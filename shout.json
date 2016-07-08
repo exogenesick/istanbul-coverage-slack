@@ -1,23 +1,38 @@
 {
-    "reports": {
-        "files": ["coverage/coverage.json"]
+  "reports": {
+    "files": ["coverage/coverage.json"]
+  },
+  "slack": {
+    "username": "Chuck Norris",
+    "channel": "reports",
+    "icon": "https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2016-06-16/51472942259_48.png",
+    "timeout": "5000"
+  },
+  "thresholds": [
+    {
+      "percent": 100,
+      "words": "excellent",
+      "color": "good"
     },
-    "slack": {
-        "username": "Chuck Norris",
-        "icon": "https://s3-us-west-2.amazonaws.com/slack-files2/bot_icons/2016-06-16/51472942259_48.png",
-        "coverageTresholds": {
-            "100": {
-                "text": "/giphy excellent",
-                "color": "good"
-            },
-            "80": {
-                "text": "/giphy not enough",
-                "color": "warning"
-            },
-            "50": {
-                "text": "/giphy it sucks",
-                "color": "danger"
-            }
-        }
+    {
+      "percent": 80,
+      "words": "nice",
+      "color": "warning"
+    },
+    {
+      "percent": 50,
+      "words": "do it better",
+      "color": "warning"
+    },
+    {
+      "percent": 40,
+      "words": "mad",
+      "color": "danger"
+    },
+    {
+      "percent": 0,
+      "words": "crap",
+      "color": "danger"
     }
+  ]
 }

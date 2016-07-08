@@ -5,10 +5,10 @@
   "main": "./bin/shout.js",
   "scripts": {
     "test": "npm run lint && npm run coveralls",
-    "test:unit": "./node_modules/.bin/mocha test/**/*.test.js",
+    "test:unit": "./node_modules/.bin/mocha 'test/**/*.test.js'",
     "lint": "./node_modules/.bin/eslint bin/ src/ test/",
-    "coverage": "./node_modules/.bin/istanbul --include-all-sources cover ./node_modules/.bin/_mocha -- -R dot test/**/*.test.js",
-    "coveralls": "./node_modules/.bin/istanbul --include-all-sources cover ./node_modules/.bin/_mocha -- -R dot test/**/*.test.js && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+    "coverage": "./node_modules/.bin/istanbul --include-all-sources cover ./node_modules/.bin/_mocha -- -R dot 'test/**/*.test.js'",
+    "coveralls": "./node_modules/.bin/istanbul --include-all-sources cover ./node_modules/.bin/_mocha -- -R dot 'test/**/*.test.js' && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "bin": {
     "shout": "./bin/shout.js"
@@ -25,15 +25,21 @@
     "istanbul": "0.4.4",
     "nconf": "^0.8.4",
     "q": "^1.4.1",
+    "request-promise": "^3.0.0",
     "rx": "^4.1.0",
     "rx-node": "^1.0.2",
-    "slack-node": "^0.2.0"
+    "slack-node": "^0.2.0",
+    "winston": "^2.2.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-as-promised": "^5.3.0",
     "coveralls": "^2.11.9",
     "eslint": "^2.13.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.10.2",
+    "eslint-plugin-jsx-a11y": "^1.5.5",
+    "eslint-plugin-react": "^5.2.2",
     "mocha": "^2.5.3"
   }
 }
