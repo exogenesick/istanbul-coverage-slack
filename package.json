@@ -16,7 +16,7 @@
   "author": "Krzysztof Pająk <kpajak@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git://github.com/exogenesick/istanbul-coverage-shout.git"
+    "url": "git://github.com/exogenesick/istanbul-coverage-slack.git"
   },
   "license": "ISC",
   "dependencies": {

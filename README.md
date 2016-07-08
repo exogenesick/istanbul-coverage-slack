@@ -1,4 +1,4 @@
-# istanbul-coverage-shout
+# istanbul-coverage-slack
 
 Sends coverage reports on Slack webhook.
 
@@ -8,8 +8,8 @@ Sends coverage reports on Slack webhook.
 
 ## Usage
 
-```npm i --save-dev istanbul-coverage-shout```
+```npm i --save-dev istanbul-coverage-slack```
 
 Inside Your project root directory
 
-```./node_modules/.bin/istanbul-coverage-shout --SLACK_WEBHOOK_URL=https://hooks.slack.com/...```
+```./node_modules/.bin/shout --SLACK_WEBHOOK_URL=https://hooks.slack.com/...```
