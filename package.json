@@ -1,6 +1,6 @@
 {
   "name": "istanbul-coverage-slack",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Sends coverage report on Slack webhook",
   "main": "./bin/shout.js",
   "scripts": {
