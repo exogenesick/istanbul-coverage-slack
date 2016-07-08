@@ -2,7 +2,7 @@
 
 Sends coverage reports on Slack webhook.
 
-[![Build Status](https://travis-ci.org/exogenesick/istanbul-coverage-shout.svg?branch=master)](https://travis-ci.org/exogenesick/istanbul-coverage-shout) [![Coverage Status](https://coveralls.io/repos/github/exogenesick/istanbul-coverage-slack/badge.svg?branch=master)](https://coveralls.io/github/exogenesick/istanbul-coverage-slack?branch=master)
+[![Build Status](https://travis-ci.org/exogenesick/istanbul-coverage-slack.svg?branch=master)](https://travis-ci.org/exogenesick/istanbul-coverage-slack) [![Coverage Status](https://coveralls.io/repos/github/exogenesick/istanbul-coverage-slack/badge.svg?branch=master)](https://coveralls.io/github/exogenesick/istanbul-coverage-slack?branch=master)
 
 ## Installation
 
