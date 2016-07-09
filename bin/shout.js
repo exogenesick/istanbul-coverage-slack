@@ -8,12 +8,12 @@ const Report = require('../src/report');
 const SlackWebhook = require('../src/webhook');
 const giphy = require('../src/giphy');
 
-winston.level = nconf.get('VERBOSE') || 'info';
-
 nconf.use('memory');
 nconf
   .argv()
   .env();
+
+winston.level = nconf.get('LOG') || 'info';
 
 const report = new Report();
 const slackWebhook = new SlackWebhook();
