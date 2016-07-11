@@ -19,8 +19,8 @@ const report = new Report();
 const slackWebhook = new SlackWebhook();
 
 config()
-  .then((x) => report.generate(x))
-  .then((y) => report.read(y))
+  .then(() => report.generate())
+  .then(() => report.read())
   .then((threshold) => giphy(threshold))
   .then((z) => slackWebhook.send(z))
   .catch((err) => { console.error(err); process.exit(1); });

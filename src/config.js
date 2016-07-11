@@ -25,10 +25,6 @@ module.exports = () => {
     nconf.set('PROJECT_NAME', 'PROJECT_NAME');
   }
 
-  if (!nconf.get('SLACK_TIMEOUT')) {
-    nconf.set('SLACK_TIMEOUT', 5000);
-  }
-
   return q.nfcall(fs.readFile, `${root}/shout.json`, 'utf-8')
     .then((data) => {
       let parsedConfig;
@@ -44,5 +40,13 @@ module.exports = () => {
     .then((json) => {
       nconf.set('COVERAGE_REPORTS_FILES', json.reports.files);
       nconf.set('THRESHOLDS', json.thresholds);
+
+      if (!nconf.get('SLACK_CHANNEL')) {
+        nconf.set('SLACK_CHANNEL', json.slack.channel);
+      }
+
+      if (!nconf.get('SLACK_TIMEOUT')) {
+        nconf.set('SLACK_TIMEOUT', json.slack.timeout);
+      }
     });
 };
